@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Blog | Resume</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'resume/images/favicon.ico'%}">
+	<!-- ========== css for model-effect ========== -->
+	<!-- ========== css for animate ========== -->
+	<link href="{% static 'resume/css/animate.min.css' %}" rel="stylesheet" />
+	<!-- ========== css for icon ========== -->
+	<link rel="stylesheet" href="{% static 'resume/css/main.css'%}">
+	<link rel="stylesheet" href="{% static 'resume/css/font-awesome.min.css'%}">
+	<link rel="stylesheet" href="{% static 'resume/css/pe-icon-7-stroke.css'%}">
+	<!-- ========== css for smartmenus ========== -->
+	<link rel="stylesheet" href="{% static 'resume/css/bootstrap-dropdownhover.css'%}">
+	<!-- ========== css for bootstrap ========== -->
+	<link rel="stylesheet" href="{% static 'resume/css/bootstrap.min.css'%}">
+	<!-- ========== css fo===== -->
+	<link rel="stylesheet" href="{% static 'resume/css/style.css'%}">
+	<!-- ========== css fo======= -->
+	<link rel="stylesheet" href="{% static 'resume/css/magnific-popup.css'%}">
+	<link rel="stylesheet" href="{% static 'resume/css/responsive.css'%}">
+</head>
+
+<body>
+	<!-- ========== start of menu section ========== -->
+	<section id="banner">
+		<div class="container">
+			<div class="banner-area">
+				<div class="row">
+					<div class="col-lg-7 col-md-7 col-sm-7">
+						<div class="banner-img">
+							<img src="{% static 'resume/images/banner-img.jpg' %}" alt="" class="img-responsive">
+						</div><!-- /.end of banner-img -->
+					</div><!-- /.end of col-md-7 -->
+					<div class="col-lg-5 col-md-5 col-sm-5">
+						<div class="banner-text">
+							
+							<h2>Hamed <span>Babaghybi</span></h2>
+							<h4>jigareee maneeeeeeeeeee</h4>
+						</div><!-- /.end of banner-text -->
+					
+					</div><!-- /.end of col-md-5 -->
+				</div><!-- /.end of row -->
+			</div><!-- /.end of banner-area -->
+		</div><!-- /.end of container -->
+	</section><!-- /#end of banner section -->
+
+    {% block body %}
+
+
+
+    {% endblock %}
+
+	<!-- ========== start footer section ========== -->
+	<section id="footer"  >
+		<div class="container ">
+			
+		</div><!-- /.end of container -->
+	</section><!-- /#end of footer section -->
+
+
+	<!-- ========== start scroll-top section ========== -->
+	<section id="scroll-top">
+		<div class="scroll-top-wrapper ">
+			<span class="scroll-top-inner">
+				<i class="pe pe-7s-play"></i>
+			</span><!-- /.end of scroll-top-inner -->
+		</div><!-- /.end of scroll-top-wrapper -->
+	</section><!-- /#end of scroll-top section -->
+
+	<script type="text/javascript" src="{% static 'resume/js/inview.min.js'%}"></script>
+	<script type="text/javascript" src="{% static 'resume/js/counterup.min.js'%}"></script>
+	<script type="text/javascript" src="{% static 'resume/js/waypoints.min.js'%}"></script>
+	<!-- ========== main jQuery library ========== -->
+	<script type="text/javascript" src="{% static 'resume/js/jquery-1.12.3.min.js'%}"></script>
+	<!-- ========== bootstrap jQuery library ========== -->
+	<script type="text/javascript" src="{% static 'resume/js/bootstrap.min.js'%}"></script>
+	<!-- ========== smartmenus jQuery library ========== -->
+	<script src="{% static 'resume/js/bootstrap-dropdownhover.js'%}"></script>
+
+	<!-- ========== menu & sidebar scroll jQuery library ========== -->
+	<script type="text/javascript" src="{% static 'resume/js/jquery.hc-sticky.min.js'%}"></script>
+	<script type="text/javascript" src="{% static 'resume/js/easypiechart.js'%}"></script>
+	<script type="text/javascript" src="{% static 'resume/js/magnific-popup.min.js'%}"></script>
+	<script type="text/javascript" src="{% static 'resume/js/main.js'%}"></script>
+	<script type="text/javascript">
+	<script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+	<script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+		$('#menu, #sidebar').hcSticky();
+	</script>
+
+	<!-- ========== jQuery library for scroll-top ========== -->
+	<script>
+		$(function(){
+			$(document).on( 'scroll', function(){
+
+			if ($(window).scrollTop() > 100) {
+			$('.scroll-top-wrapper').addClass('show');
+			} else {
+			$('.scroll-top-wrapper').removeClass('show');
+			}
+			});
+			$('.scroll-top-wrapper').on('click', scrollToTop);
+		});
+
+		function scrollToTop() {
+			verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+			element = $('body');
+			offset = element.offset();
+			offsetTop = offset.top;
+			$('html, body').animate({scrollTop: offsetTop}, 600, 'linear');
+		}
+	</script>
+
+
+</body>
+</html>
